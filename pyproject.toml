@@ -23,6 +23,8 @@ Pillow = "^8.1.0"
 scikit-image = "^0.18.1"
 seaborn = "^0.11.1"
 tqdm = "^4.56.0"
+pyarrow = "^3.0.0"
+hydra-core = "^1.0.6"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

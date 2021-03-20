@@ -1,0 +1,3 @@
+train_path: ./data/data/train.csv
+test_path: ./data/data/test.csv
+save_dir: ./data/feature

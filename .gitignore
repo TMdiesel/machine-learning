@@ -130,3 +130,12 @@ dmypy.json
 
 # vscode
 .vscode/
+
+# data
+data/
+
+# memo
+memo.md
+
+# hydra 
+outputs/
