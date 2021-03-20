@@ -7,7 +7,7 @@
     ```
     poetry run python src/feature/create.py
     ```
-2. 学習・推論を行います。必要に応じて`config/feature/config.yaml`を変更します。
+2. 学習・推論を行います。必要に応じて`config/model/config.yaml`を変更します。
 CV結果はMLflow UIから一覧を確認することができます。
     ```
     poetry run python src/model/run.py
