@@ -26,6 +26,8 @@ class Runner:
         ftest: pd.DataFrame, 
         ytrain: np.array, 
         random_seed:int,
+        client,
+        run_id,
         n_fold=5,
         ):
 
@@ -36,6 +38,8 @@ class Runner:
         self.ytrain=ytrain
         self.n_fold = n_fold
         self.random_seed=random_seed
+        self.client=client
+        self.run_id=run_id
 
     def _normalize(self,x:np.array,flag_fit):
         if flag_fit:
@@ -55,6 +59,7 @@ class Runner:
         score=cross_val_score(self.model,x_train,self.ytrain,
                                     cv=skf,scoring="accuracy")
         logger.info(f"cv_score:{score.mean()}")
+        self.client.log_metric(self.run_id,"cv_score",score.mean())
 
         # train
         self.model.fit(x_train,self.ytrain)

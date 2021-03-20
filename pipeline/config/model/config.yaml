@@ -3,6 +3,10 @@ run_name: test
 random_seed: 1234
 n_fold: 5
 
+model_name: LogisticRegression
+params:
+  penalty: l2
+
 # data, feature
 feature_dir: ./data/feature
 train_path: ./data/data/train.csv
@@ -12,3 +16,7 @@ feat_list: [age,embarked,familysize,fare,pclass,sex,title]
 log_dir: ./logs/model
 log_normal:  normal.log
 log_error: error.log
+
+# mlflow
+tracking_uri: ./mlruns
+experiment_name: lr
