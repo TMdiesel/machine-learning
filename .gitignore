@@ -139,3 +139,6 @@ memo.md
 
 # hydra 
 outputs/
+
+# log
+*.log

@@ -11,6 +11,7 @@ import hydra
 
 # my package
 from src.feature.base import Feature
+import src.utils.utils as utils
 
 # logger
 logger=logging.getLogger(__name__)
@@ -154,6 +155,12 @@ def generate_features(namespace, overwrite, kwargs):
 def main(config):
     cwd=pathlib.Path(hydra.utils.get_original_cwd())
 
+    utils.init_root_logger(
+        cwd.joinpath(config.log_dir),
+        config.log_normal,
+        config.log_error,
+        )
+
     train = pd.read_csv(cwd.joinpath(config.train_path))
     test =  pd.read_csv(cwd.joinpath(config.test_path))
     kwargs={
@@ -161,7 +168,6 @@ def main(config):
         "test":test,
         "save_dir":cwd.joinpath(config.save_dir)
         }
-
     generate_features(globals(),False,kwargs)
 
 

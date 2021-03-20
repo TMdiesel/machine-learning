@@ -4,18 +4,22 @@ import pathlib
 import time
 from contextlib import contextmanager
 
+# logger
+logger=logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO)
+
 
 @contextmanager
 def timer(name):
     t0 = time.time()
-    print(f'[{name}] start')
+    logger.info(f'[{name}] start')
     yield
-    print(f'[{name}] done in {time.time() - t0:.0f} s')
+    logger.info(f'[{name}] done in {time.time() - t0:.0f} s')
 
 
 def init_root_logger(
     outdir: pathlib.Path,
-    filename_normal:str="log.log",
+    filename_normal:str="normal.log",
     filename_error:str="error.log",
     ):
 

@@ -1,0 +1,14 @@
+# runner
+run_name: test
+random_seed: 1234
+n_fold: 5
+
+# data, feature
+feature_dir: ./data/feature
+train_path: ./data/data/train.csv
+feat_list: [age,embarked,familysize,fare,pclass,sex,title]
+
+# log
+log_dir: ./logs/model
+log_normal:  normal.log
+log_error: error.log
