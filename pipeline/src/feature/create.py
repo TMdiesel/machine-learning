@@ -89,7 +89,6 @@ class Age(Feature):
 class Title(Feature):
     def get_title(self,name):
         title_search = re.search(' ([A-Za-z]+)\.', name)
-        # If the title exists, extract and return it.
         if title_search:
             return title_search.group(1)
         return ""
@@ -151,7 +150,7 @@ def generate_features(namespace, overwrite, kwargs):
             f.run().save()
 
 
-@hydra.main(config_path="../../config/",config_name="config.yaml")
+@hydra.main(config_path="../../config/feature/",config_name="config.yaml")
 def main(config):
     cwd=pathlib.Path(hydra.utils.get_original_cwd())
 
@@ -167,4 +166,7 @@ def main(config):
 
 
 if __name__ == '__main__':
+    """
+    for debug
+    """
     main()
