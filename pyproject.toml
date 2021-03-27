@@ -25,9 +25,11 @@ seaborn = "^0.11.1"
 tqdm = "^4.56.0"
 pyarrow = "^3.0.0"
 hydra-core = "^1.0.6"
+bokeh = "^2.3.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+pysen = {version = "0.9.1", extras = ["lint"]}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
