@@ -4,8 +4,11 @@
 
 - [pipeline][pipeline]
     - 特徴量管理、学習・推論パイプラインコードです。
+- [classification_bokeh][classification_bokeh]
+  - ロジスティック回帰のハイパーパラメーターを変更した際の分類境界の変化をbokehでインタラクティブに可視化します。
 
 [pipeline]:./pipeline
+[classification_bokeh]:./classification_bokeh
 
 ## 実行環境
 下記コマンドで必要なパッケージをインストールできます。
