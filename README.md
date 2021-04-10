@@ -11,6 +11,7 @@
 
 [pipeline]:./pipeline
 [classification_bokeh]:./classification_bokeh
+[vscode_python_setting]:./vscode_python_setting
 
 ## 実行環境
 下記コマンドで必要なパッケージをインストールできます。
