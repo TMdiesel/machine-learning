@@ -151,3 +151,7 @@ check.ipynb
 
 # mlflow
 mlruns/
+
+# model
+automl/models
+AutogluonModels
