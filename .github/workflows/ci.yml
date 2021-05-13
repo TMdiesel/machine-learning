@@ -1,0 +1,26 @@
+name: ci
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  ci:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Run image
+        uses: abatilo/actions-poetry@v2.0.0
+        with:
+          poetry-version: 1.1.2
+
+      - name: install dependencies
+        run: poetry install
+
+      - name: pytest
+        run:
+          poetry run pytest pytest_/test.py
