@@ -23,4 +23,4 @@ jobs:
 
       - name: pytest
         run:
-          poetry run pytest pytest_/test.py
+          poetry run pytest 

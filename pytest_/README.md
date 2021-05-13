@@ -11,4 +11,4 @@ poetry run pytest test.py
 ## 参考
 - [pytestに入門してみたメモ](https://qiita.com/everylittle/items/1a2748e443d8282c94b2)
 
-[ci.yml]:../github/workflows/ci.yml
+[ci.yml]:../.github/workflows/ci.yml
