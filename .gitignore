@@ -155,3 +155,6 @@ mlruns/
 # model
 automl/models
 AutogluonModels
+
+# check
+check.py
