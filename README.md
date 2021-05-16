@@ -12,12 +12,15 @@
   - AutoMLライブラリの練習です。
 - [pytest_][pytest_]
   - GitHub Actionsでpytestを実行する対象のテストスクリプトです。
+- [interpretable_ml][interpretable_ml]
+  - 教師ありモデルの解釈手法のまとめです。
 
 [pipeline]:./pipeline
 [classification_bokeh]:./classification_bokeh
 [vscode_python_setting]:./vscode_python_setting
 [automl]:./automl
 [pytest_]:./pytest_
+[interpretable_ml]:./interpretable_ml
 
 ## 実行環境
 下記コマンドで必要なパッケージをインストールできます。
