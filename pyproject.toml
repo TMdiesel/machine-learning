@@ -32,6 +32,9 @@ mxnet = "<2.0.0"
 autogluon = "^0.2.0"
 pycaret = "^2.3.1"
 jupyterlab-code-formatter = "^1.4.10"
+shap = "^0.39.0"
+lightgbm = "^3.2.1"
+catboost = "^0.25.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

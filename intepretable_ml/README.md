@@ -18,4 +18,6 @@
 
 ## 参考
 - [Interpretable Machine Learning](https://hacarus.github.io/interpretable-ml-book-ja/)
+- [slundberg/shap](https://github.com/slundberg/shap)
+- [SHAP公式ドキュメント](https://shap.readthedocs.io/en/latest/index.html)
 
