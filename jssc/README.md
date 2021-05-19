@@ -1,14 +1,15 @@
 # 統計検定
 
 統計検定に関連する実装です。
-README に理論を書き、notebook 上で実装をします。
+理論と実装を同一の notebook 上にまとめています。
+ライブラリを使うので、スクラッチ実装ではないです。
 
-## ポアソン回帰
+## contents
 
-ポアソン回帰は一般化線形モデルの一つです。
-一般化線形モデルとは、下記の式で説明関数$`x`$
+- ポアソン回帰: [poisson_regression.ipynb][poisson_regression.ipynb]
 
-```math
-Delta = \nabla^2 =
-frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2}
-```
+[poisson_regression.ipynb]: ./notebooks/poisson_regression.ipynb
+
+## 参考
+
+- [統計学実践ワークブック](https://www.gakujutsu.co.jp/product/978-4-7806-0852-6/)
