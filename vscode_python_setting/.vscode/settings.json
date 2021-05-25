@@ -7,6 +7,7 @@
   "python.linting.mypyEnabled": true,         // 文法チェックにmypyを使う
   "python.formatting.provider": "black",      // 自動整形にblackを使う
   "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
     "editor.formatOnSave": true,              // 保存時に自動整形を行う
     "editor.formatOnPaste": false,            // ペースト時に自動整形を行わない
     "editor.formatOnType": false,             // 入力後に自動整形を行わない
