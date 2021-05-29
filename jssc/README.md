@@ -7,8 +7,10 @@
 ## contents
 
 - ポアソン回帰: [poisson_regression.ipynb][poisson_regression.ipynb]
+- 自己回帰: [time_series.ipynb][time_series.ipynb]
 
 [poisson_regression.ipynb]: ./notebooks/poisson_regression.ipynb
+[auto_regression.ipynb]: ./notebooks/auto_regression.ipynb
 
 ## 参考
 
