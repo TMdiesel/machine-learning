@@ -35,6 +35,7 @@ jupyterlab-code-formatter = "^1.4.10"
 shap = "^0.39.0"
 lightgbm = "^3.2.1"
 catboost = "^0.25.1"
+optuna-dashboard = "^0.4.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

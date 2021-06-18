@@ -538,6 +538,14 @@ urllib3 = ">=1.25.4,<1.27"
 crt = ["awscrt (==0.11.11)"]
 
 [[package]]
+name = "bottle"
+version = "0.12.19"
+description = "Fast and simple WSGI-framework for small web-applications."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "bottleneck"
 version = "1.3.2"
 description = "Fast NumPy array functions written in C"
@@ -620,12 +628,59 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
+name = "cliff"
+version = "3.8.0"
+description = "Command Line Interface Formulation Framework"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+cmd2 = ">=1.0.0"
+pbr = ">=2.0.0,<2.1.0 || >2.1.0"
+PrettyTable = ">=0.7.2"
+pyparsing = ">=2.1.0"
+PyYAML = ">=3.12"
+stevedore = ">=2.0.1"
+
+[[package]]
 name = "cloudpickle"
 version = "1.6.0"
 description = "Extended pickling support for Python objects"
 category = "main"
 optional = false
 python-versions = ">=3.5"
+
+[[package]]
+name = "cmaes"
+version = "0.8.2"
+description = "Lightweight Covariance Matrix Adaptation Evolution Strategy (CMA-ES) implementation for Python 3."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+numpy = "*"
+
+[[package]]
+name = "cmd2"
+version = "2.1.1"
+description = "cmd2 - quickly build feature-rich and user-friendly interactive command line applications in Python"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+attrs = ">=16.3.0"
+colorama = ">=0.3.7"
+pyperclip = ">=1.6"
+pyreadline3 = {version = "*", markers = "sys_platform == \"win32\" and python_version >= \"3.8\""}
+wcwidth = ">=0.1.7"
+
+[package.extras]
+dev = ["codecov", "doc8", "flake8", "invoke", "mypy (==0.902)", "nox", "pytest (>=4.6)", "pytest-cov", "pytest-mock", "sphinx", "sphinx-rtd-theme", "sphinx-autobuild", "twine (>=1.11)"]
+test = ["codecov", "coverage", "pytest (>=4.6)", "pytest-cov", "pytest-mock", "gnureadline"]
+validate = ["flake8", "mypy (==0.902)"]
 
 [[package]]
 name = "colorama"
@@ -639,7 +694,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 name = "colorlog"
 version = "4.8.0"
 description = "Log formatting with colors!"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -2269,6 +2324,50 @@ examples_unix = ["fanova"]
 test = ["nbconvert", "jupyter-client", "matplotlib", "pytest", "pytest-xdist", "pytest-timeout", "nbformat", "oslo.concurrency", "flaky", "pre-commit", "pytest-cov", "pytest-rerunfailures", "mypy"]
 
 [[package]]
+name = "optuna"
+version = "2.8.0"
+description = "A hyperparameter optimization framework"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+alembic = "*"
+cliff = "*"
+cmaes = ">=0.8.2"
+colorlog = "*"
+numpy = "*"
+packaging = ">=20.0"
+scipy = "!=1.4.0"
+sqlalchemy = ">=1.1.0"
+tqdm = "*"
+
+[package.extras]
+benchmark = ["asv", "virtualenv"]
+checking = ["black", "hacking", "isort", "mypy (==0.790)", "blackdoc"]
+codecov = ["codecov", "pytest-cov"]
+doctest = ["cma", "matplotlib (>=3.0.0)", "pandas", "plotly (>=4.0.0)", "scikit-learn (>=0.24.2)", "scikit-optimize", "mlflow"]
+document = ["sphinx (<4.0.0)", "sphinx-rtd-theme", "sphinx-copybutton", "sphinx-gallery", "sphinx-plotly-directive", "pillow", "matplotlib", "scikit-learn", "plotly (>=4.0.0)", "pandas", "lightgbm", "torch (==1.8.0)", "torchvision (==0.9.0)", "torchaudio (==0.8.0)", "thop"]
+experimental = ["redis"]
+integration = ["chainer (>=5.0.0)", "cma", "lightgbm", "mlflow", "mpi4py", "mxnet", "pandas", "scikit-learn (>=0.24.2)", "scikit-optimize", "xgboost", "pytorch-ignite", "pytorch-lightning (>=1.0.2)", "skorch", "catalyst (>=21.3)", "torchaudio (==0.8.0)", "allennlp (>=2.2.0)", "fastai", "keras", "tensorflow (<2.5.0)", "tensorflow-datasets", "botorch (>=0.4.0)", "torch (==1.8.0+cpu)", "torchvision (==0.9.0+cpu)", "torch (==1.8.0)", "torchvision (==0.9.0)"]
+optional = ["bokeh (<2.0.0)", "matplotlib (>=3.0.0)", "pandas", "plotly (>=4.0.0)", "redis", "scikit-learn (>=0.24.2)"]
+testing = ["bokeh (<2.0.0)", "chainer (>=5.0.0)", "cma", "fakeredis", "lightgbm", "matplotlib (>=3.0.0)", "mlflow", "mpi4py", "mxnet", "pandas", "plotly (>=4.0.0)", "pytest", "scikit-learn (>=0.24.2)", "scikit-optimize", "xgboost", "keras", "tensorflow-datasets", "pytorch-ignite", "pytorch-lightning (>=1.0.2)", "skorch", "catalyst (>=21.3)", "torchaudio (==0.8.0)", "allennlp (>=2.2.0)", "fastai", "tensorflow (<2.5.0)", "botorch (>=0.4.0)", "torch (==1.8.0+cpu)", "torchvision (==0.9.0+cpu)", "torch (==1.8.0)", "torchvision (==0.9.0)"]
+tests = ["fakeredis", "pytest"]
+
+[[package]]
+name = "optuna-dashboard"
+version = "0.4.2"
+description = "Real-time dashboard for Optuna."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+bottle = "*"
+optuna = ">=2.4"
+scikit-learn = "*"
+
+[[package]]
 name = "packaging"
 version = "20.8"
 description = "Core utilities for Python packages"
@@ -2399,6 +2498,14 @@ numpy = ">=1.4"
 six = "*"
 
 [[package]]
+name = "pbr"
+version = "5.6.0"
+description = "Python Build Reasonableness"
+category = "main"
+optional = false
+python-versions = ">=2.6"
+
+[[package]]
 name = "pexpect"
 version = "4.8.0"
 description = "Pexpect allows easy control of interactive console applications."
@@ -2501,6 +2608,20 @@ python-versions = "*"
 [package.dependencies]
 cymem = ">=2.0.2,<2.1.0"
 murmurhash = ">=0.28.0,<1.1.0"
+
+[[package]]
+name = "prettytable"
+version = "2.1.0"
+description = "A simple Python library for easily displaying tabular data in a visually appealing ASCII table format"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+wcwidth = "*"
+
+[package.extras]
+tests = ["pytest", "pytest-cov"]
 
 [[package]]
 name = "prometheus-client"
@@ -2754,6 +2875,14 @@ optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
+name = "pyperclip"
+version = "1.8.2"
+description = "A cross-platform clipboard module for Python. (Only handles plain text for now.)"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "pypiwin32"
 version = "223"
 description = ""
@@ -2763,6 +2892,14 @@ python-versions = "*"
 
 [package.dependencies]
 pywin32 = ">=223"
+
+[[package]]
+name = "pyreadline3"
+version = "3.3"
+description = "A python implementation of GNU readline."
+category = "main"
+optional = false
+python-versions = "*"
 
 [[package]]
 name = "pyrsistent"
@@ -3355,6 +3492,17 @@ develop = ["cython (>=0.29)"]
 docs = ["sphinx", "nbconvert", "jupyter-client", "ipykernel", "matplotlib", "nbformat", "numpydoc", "pandas-datareader"]
 
 [[package]]
+name = "stevedore"
+version = "3.3.0"
+description = "Manage dynamic plugins for Python applications"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+pbr = ">=2.0.0,<2.1.0 || >2.1.0"
+
+[[package]]
 name = "tabulate"
 version = "0.8.7"
 description = "Pretty-print tabular data"
@@ -3869,7 +4017,7 @@ heapdict = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.9"
-content-hash = "f8efcdb3f1d3d3c500f2fad24b22623e7fc32ab39e826536006b597f9226bae8"
+content-hash = "26a91ffd8c1f13cb8236e473df194f926b1406c36d3de88c8ad4ab65eb2fc00f"
 
 [metadata.files]
 absl-py = [
@@ -3937,6 +4085,10 @@ argon2-cffi = [
     {file = "argon2_cffi-20.1.0-cp38-cp38-win_amd64.whl", hash = "sha256:9dfd5197852530294ecb5795c97a823839258dfd5eb9420233c7cfedec2058f2"},
     {file = "argon2_cffi-20.1.0-cp39-cp39-win32.whl", hash = "sha256:e2db6e85c057c16d0bd3b4d2b04f270a7467c147381e8fd73cbbe5bc719832be"},
     {file = "argon2_cffi-20.1.0-cp39-cp39-win_amd64.whl", hash = "sha256:8a84934bd818e14a17943de8099d41160da4a336bcc699bb4c394bbb9b94bd32"},
+    {file = "argon2_cffi-20.1.0-pp36-pypy36_pp73-macosx_10_7_x86_64.whl", hash = "sha256:b94042e5dcaa5d08cf104a54bfae614be502c6f44c9c89ad1535b2ebdaacbd4c"},
+    {file = "argon2_cffi-20.1.0-pp36-pypy36_pp73-win32.whl", hash = "sha256:8282b84ceb46b5b75c3a882b28856b8cd7e647ac71995e71b6705ec06fc232c3"},
+    {file = "argon2_cffi-20.1.0-pp37-pypy37_pp73-macosx_10_7_x86_64.whl", hash = "sha256:3aa804c0e52f208973845e8b10c70d8957c9e5a666f702793256242e9167c4e0"},
+    {file = "argon2_cffi-20.1.0-pp37-pypy37_pp73-win_amd64.whl", hash = "sha256:36320372133a003374ef4275fbfce78b7ab581440dfca9f9471be3dd9a522428"},
 ]
 asttokens = [
     {file = "asttokens-2.0.4-py2.py3-none-any.whl", hash = "sha256:766d3352908730efb20b95ae22db0f1cb1bedb67c6071fcffb5c236ea673f2f7"},
@@ -4063,6 +4215,10 @@ botocore = [
     {file = "botocore-1.20.70-py2.py3-none-any.whl", hash = "sha256:3dea2656b5555a1bcb299a83fdefe6f0ef331ffae55cc8f8edf06557342738c0"},
     {file = "botocore-1.20.70.tar.gz", hash = "sha256:9bc8bd5f601d35658b2aaa78ebeef154fd092e64b37059e8eeef51648a3936c8"},
 ]
+bottle = [
+    {file = "bottle-0.12.19-py3-none-any.whl", hash = "sha256:f6b8a34fe9aa406f9813c02990db72ca69ce6a158b5b156d2c41f345016a723d"},
+    {file = "bottle-0.12.19.tar.gz", hash = "sha256:a9d73ffcbc6a1345ca2d7949638db46349f5b2b77dac65d6494d45c23628da2c"},
+]
 bottleneck = [
     {file = "Bottleneck-1.3.2.tar.gz", hash = "sha256:20179f0b66359792ea283b69aa16366419132f3b6cf3adadc0c48e2e8118e573"},
 ]
@@ -4145,9 +4301,21 @@ click = [
     {file = "click-7.1.2-py2.py3-none-any.whl", hash = "sha256:dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc"},
     {file = "click-7.1.2.tar.gz", hash = "sha256:d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a"},
 ]
+cliff = [
+    {file = "cliff-3.8.0-py3-none-any.whl", hash = "sha256:a7e38e916649defae219596bad3e17b393bcf286561d54c58d6de39c40d40253"},
+    {file = "cliff-3.8.0.tar.gz", hash = "sha256:8dd215d0a84c9a3ab2fa2aa700849f4e7b786639f66caa0ad4108c85dca95a7c"},
+]
 cloudpickle = [
     {file = "cloudpickle-1.6.0-py3-none-any.whl", hash = "sha256:3a32d0eb0bc6f4d0c57fbc4f3e3780f7a81e6fee0fa935072884d58ae8e1cc7c"},
     {file = "cloudpickle-1.6.0.tar.gz", hash = "sha256:9bc994f9e9447593bd0a45371f0e7ac7333710fcf64a4eb9834bf149f4ef2f32"},
+]
+cmaes = [
+    {file = "cmaes-0.8.2-py3-none-any.whl", hash = "sha256:9c4127be8942da3ac6857a7564d18a4a655462d77aa2d551a8e88063b23e0699"},
+    {file = "cmaes-0.8.2.tar.gz", hash = "sha256:1c04ba23ded925ef13b96f42cfbd667a905ea5b80754c750e6448b9fcda96a5d"},
+]
+cmd2 = [
+    {file = "cmd2-2.1.1-py3-none-any.whl", hash = "sha256:fd1a77f84b44bf1767e8a69d630fb6f781df16fe5e2069caa132f8abcd8644f8"},
+    {file = "cmd2-2.1.1.tar.gz", hash = "sha256:a45f6a50b6081c5767b0e410da3f9cebdf6d8fb2aff80fab07d633c6eaaa6d70"},
 ]
 colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
@@ -5058,6 +5226,14 @@ opencv-python = [
 openml = [
     {file = "openml-0.12.1.tar.gz", hash = "sha256:2c57d242de582ab37347b3484d3f79092fc7aec30c255831789daefc756ae638"},
 ]
+optuna = [
+    {file = "optuna-2.8.0-py3-none-any.whl", hash = "sha256:9be44e8f27c1ec7c7eb51de961b8e933e6c154779d1488f00f8ab92673b1e79d"},
+    {file = "optuna-2.8.0.tar.gz", hash = "sha256:706a54cadcf57035cb2506e591ef282afb27e07e8f07409c61b72b0fbdfd4109"},
+]
+optuna-dashboard = [
+    {file = "optuna-dashboard-0.4.2.tar.gz", hash = "sha256:5e19faf146b697b5e0cf536f9becc786facb43662f87d710860b0d1436f6ff00"},
+    {file = "optuna_dashboard-0.4.2-py3-none-any.whl", hash = "sha256:c1aa94ccf9d750cf8362bb990d14abd26ed8644de1db347c17d55749d8b42b5d"},
+]
 packaging = [
     {file = "packaging-20.8-py2.py3-none-any.whl", hash = "sha256:24e0da08660a87484d1602c30bb4902d74816b6985b93de36926f5bc95741858"},
     {file = "packaging-20.8.tar.gz", hash = "sha256:78598185a7008a470d64526a8059de9aaa449238f280fc9eb6b13ba6c4109093"},
@@ -5107,6 +5283,10 @@ pathspec = [
 patsy = [
     {file = "patsy-0.5.1-py2.py3-none-any.whl", hash = "sha256:5465be1c0e670c3a965355ec09e9a502bf2c4cbe4875e8528b0221190a8a5d40"},
     {file = "patsy-0.5.1.tar.gz", hash = "sha256:f115cec4201e1465cd58b9866b0b0e7b941caafec129869057405bfe5b5e3991"},
+]
+pbr = [
+    {file = "pbr-5.6.0-py2.py3-none-any.whl", hash = "sha256:c68c661ac5cc81058ac94247278eeda6d2e6aecb3e227b0387c30d277e7ef8d4"},
+    {file = "pbr-5.6.0.tar.gz", hash = "sha256:42df03e7797b796625b1029c0400279c7c34fd7df24a7d7818a1abb5b38710dd"},
 ]
 pexpect = [
     {file = "pexpect-4.8.0-py2.py3-none-any.whl", hash = "sha256:0b48a55dcb3c05f3329815901ea4fc1537514d6ba867a152b581d69ae3710937"},
@@ -5187,6 +5367,10 @@ preshed = [
     {file = "preshed-3.0.5-cp39-cp39-manylinux2014_x86_64.whl", hash = "sha256:30f0c8ea85113d0565a1e3eb6222d00513ec39b56f3f9a2615e304575e65422e"},
     {file = "preshed-3.0.5-cp39-cp39-win_amd64.whl", hash = "sha256:fb4d2e82add82d63b2c97802b759a58ff200d06b632e2edc48a9ced1e6472faf"},
     {file = "preshed-3.0.5.tar.gz", hash = "sha256:c6d3dba39ed5059aaf99767017b9568c75b2d0780c3481e204b1daecde00360e"},
+]
+prettytable = [
+    {file = "prettytable-2.1.0-py3-none-any.whl", hash = "sha256:bb5abc72bdfae6f3cdadb04fb7726f6915af0ddb7c897a41d4ad7736d9bfd8fd"},
+    {file = "prettytable-2.1.0.tar.gz", hash = "sha256:5882ed9092b391bb8f6e91f59bcdbd748924ff556bb7c634089d5519be87baa0"},
 ]
 prometheus-client = [
     {file = "prometheus_client-0.9.0-py2.py3-none-any.whl", hash = "sha256:b08c34c328e1bf5961f0b4352668e6c8f145b4a087e09b7296ef62cbe4693d35"},
@@ -5363,9 +5547,16 @@ pyparsing = [
     {file = "pyparsing-2.4.7-py2.py3-none-any.whl", hash = "sha256:ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b"},
     {file = "pyparsing-2.4.7.tar.gz", hash = "sha256:c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1"},
 ]
+pyperclip = [
+    {file = "pyperclip-1.8.2.tar.gz", hash = "sha256:105254a8b04934f0bc84e9c24eb360a591aaf6535c9def5f29d92af107a9bf57"},
+]
 pypiwin32 = [
     {file = "pypiwin32-223-py3-none-any.whl", hash = "sha256:67adf399debc1d5d14dffc1ab5acacb800da569754fafdc576b2a039485aa775"},
     {file = "pypiwin32-223.tar.gz", hash = "sha256:71be40c1fbd28594214ecaecb58e7aa8b708eabfa0125c8a109ebd51edbd776a"},
+]
+pyreadline3 = [
+    {file = "pyreadline3-3.3-py3-none-any.whl", hash = "sha256:0003fd0079d152ecbd8111202c5a7dfa6a5569ffd65b235e45f3c2ecbee337b4"},
+    {file = "pyreadline3-3.3.tar.gz", hash = "sha256:ff3b5a1ac0010d0967869f723e687d42cabc7dccf33b14934c92aa5168d260b3"},
 ]
 pyrsistent = [
     {file = "pyrsistent-0.17.3.tar.gz", hash = "sha256:2e636185d9eb976a18a8a8e96efce62f2905fea90041958d8cc2a189756ebf3e"},
@@ -5843,6 +6034,10 @@ statsmodels = [
     {file = "statsmodels-0.12.2-cp39-none-win32.whl", hash = "sha256:3aab85174444f1bcad1e9218a3d3db08f0f86eeb97985236ca8605a0a39ce305"},
     {file = "statsmodels-0.12.2-cp39-none-win_amd64.whl", hash = "sha256:94d3632d56c13eebebaefb52bd4b43144ad5a131337b57842f46db826fa7d2d3"},
     {file = "statsmodels-0.12.2.tar.gz", hash = "sha256:8ad7a7ae7cdd929095684118e3b05836c0ccb08b6a01fe984159475d174a1b10"},
+]
+stevedore = [
+    {file = "stevedore-3.3.0-py3-none-any.whl", hash = "sha256:50d7b78fbaf0d04cd62411188fa7eedcb03eb7f4c4b37005615ceebe582aa82a"},
+    {file = "stevedore-3.3.0.tar.gz", hash = "sha256:3a5bbd0652bf552748871eaa73a4a8dc2899786bc497a2aa1fcb4dcdb0debeee"},
 ]
 tabulate = [
     {file = "tabulate-0.8.7-py3-none-any.whl", hash = "sha256:ac64cb76d53b1231d364babcd72abbb16855adac7de6665122f97b593f1eb2ba"},

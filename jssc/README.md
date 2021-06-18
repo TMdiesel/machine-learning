@@ -8,9 +8,11 @@
 
 - ポアソン回帰: [poisson_regression.ipynb][poisson_regression.ipynb]
 - 自己回帰: [time_series.ipynb][time_series.ipynb]
+- メトロポリス・ヘイスティングス法: [metropolis-hastings.ipynb.ipynb][metropolis-hastings.ipynb.ipynb]
 
 [poisson_regression.ipynb]: ./notebooks/poisson_regression.ipynb
 [auto_regression.ipynb]: ./notebooks/auto_regression.ipynb
+[metropolis-hastings.ipynb]: ./notebooks/metropolis-hastings.ipynb
 
 ## 参考
 
