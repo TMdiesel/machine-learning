@@ -159,3 +159,6 @@ AutogluonModels
 # check
 check.py
 template.ipynb
+
+# bayesian-opt
+bayesian_optimization/*/*optuna*
