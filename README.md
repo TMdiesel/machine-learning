@@ -17,6 +17,8 @@
   - 教師ありモデルの解釈手法のまとめです。
 - [jssc][jssc]
   - 統計検定に関連する実装です。
+- [bayesian_optimization][bayesian_optimization]
+  - ベイズ最適化の実装です。
 
 [pipeline]: ./pipeline
 [classification_bokeh]: ./classification_bokeh
@@ -25,6 +27,7 @@
 [pytest_]: ./pytest_
 [interpretable_ml]: ./interpretable_ml
 [jssc]: ./jssc
+[bayesian_optimization]: ./bayesian_optimization
 
 ## 実行環境
 

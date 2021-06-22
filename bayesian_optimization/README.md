@@ -5,4 +5,4 @@
 
 ## 最適化の様子
 
-![](./notebooks/gpei.gif)
+![](https://user-images.githubusercontent.com/50258785/122867312-3e479100-d364-11eb-9e2e-a75b22d6cb3f.gif)
